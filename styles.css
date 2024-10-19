@@ -4,6 +4,9 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
 }
 
 .container {
