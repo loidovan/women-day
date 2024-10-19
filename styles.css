@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 100%; /* Đảm bảo chiều rộng tối đa */
+  margin: 0 auto;
+  padding: 0; /* Bỏ padding để hình ảnh tràn hết */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  margin: 0; /* Bỏ margin để slider tràn ra ngoài */
+  overflow: hidden;
+  border-radius: 10px;
+  width: 30vw; /* Chiếm toàn bộ chiều rộng màn hình */
+  height: 80vh; /* Chiều cao chiếm toàn bộ chiều cao màn hình */
+}
+
+.slider img {
+  width: 100%; /* Chiều rộng 100% của slider */
+  height: 100%; /* Chiều cao 100% của slider */
+  object-fit: cover; /* Giữ tỉ lệ hình ảnh */
+  border-radius: 10px;
+  transition: opacity 1s ease-in-out; /* Hiệu ứng chuyển động */
+}
+
+h1 {
+  color: #e91e63;
+  margin: 20px 0; /* Giảm margin để tiêu đề gần hơn với slider */
+}
+
+/* Ẩn điều khiển âm thanh */
+audio {
+  display: none;
+}
+
+.wish {
+  position: absolute;
+  bottom: 20px; /* Đặt vị trí của lời chúc */
+  left: 50%; /* Giữa màn hình */
+  transform: translateX(-50%); /* Giữa chính xác */
+  color: white; /* Màu chữ trắng */
+  font-size: 16px; /* Kích thước chữ */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hiệu ứng đổ bóng cho chữ */
+  width: 80%;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .slider {
+    width: 100vw;
+      height: 80vh; /* Giảm chiều cao cho màn hình nhỏ hơn */
+  }
+
+  h1 {
+      font-size: 1.5em; /* Giảm kích thước tiêu đề cho màn hình nhỏ hơn */
+  }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Ẩn thanh cuộn */
+}
+
+
+.heart {
+  position: absolute;
+  width: 30px; /* Kích thước trái tim */
+  height: 30px; /* Kích thước trái tim */
+  background-color: #e91e63; /* Màu trái tim */
+  transform: rotate(-36deg);
+  animation: 5s infinite, blink 5s infinite; /* Hiệu ứng nổi */
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 30px; /* Kích thước trái tim */
+  height: 30px; /* Kích thước trái tim */
+  background-color: #e91e63; /* Màu trái tim */
+  border-radius: 50%; /* Tạo hình tròn */
+}
+
+.heart::before {
+  top: -15px; /* Đặt phần trên trái tim */
+  left: 0;
+}
+
+.heart::after {
+  left: 15px; /* Đặt phần bên phải trái tim */
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px); /* Độ cao di chuyển */
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0; /* Giảm độ trong suốt để tạo hiệu ứng nhấp nháy */
+  }
+}
+
+@keyframes backgroundColorChange {
+  0% {
+    background-color: #f9f9f9; /* Trắng nhạt */
+}
+25% {
+    background-color: #e0f7fa; /* Xanh da trời nhạt */
+}
+50% {
+    background-color: #f0f4c3; /* Vàng nhạt */
+}
+75% {
+    background-color: #fff3e0; /* Cam nhạt */
+}
+100% {
+    background-color: #f9f9f9; /* Quay lại trắng nhạt */
+}
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative; /* Đảm bảo các phần tử con có vị trí tương đối */
+}
+
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: backgroundColorChange 20s infinite; /* Thay đổi màu nền mỗi 10 giây */
+}
+
+.play-btn {
+  position: absolute;
+  bottom: -58px; /* Căn lề từ trên */
+  right: 20px; /* Căn lề từ bên phải */
+  background-color: rgba(255, 255, 255, 0.7); /* Nền màu trắng trong suốt */
+  border: none;
+  border-radius: 50%; /* Hình tròn */
+  width: 50px; /* Kích thước nút */
+  height: 50px; /* Kích thước nút */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+
+}
+
+.play-btn:hover {
+  background-color: rgba(255, 255, 255, 1); /* Thay đổi màu khi hover */
+}
+
+.play-btn i {
+  color: #e91e63; /* Màu icon */
+  font-size: 24px; /* Kích thước icon */
+}
