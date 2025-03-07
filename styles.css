@@ -4,6 +4,9 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
 }
 
 .container {
@@ -49,7 +52,7 @@ audio {
   transform: translateX(-50%); /* Giữa chính xác */
   color: white; /* Màu chữ trắng */
   font-size: 16px; /* Kích thước chữ */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hiệu ứng đổ bóng cho chữ */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Hiệu ứng đổ bóng cho chữ */
   width: 80%;
 }
 
@@ -64,17 +67,6 @@ audio {
       font-size: 1.5em; /* Giảm kích thước tiêu đề cho màn hình nhỏ hơn */
   }
 }
-
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Ẩn thanh cuộn */
-}
-
 
 .heart {
   position: absolute;
@@ -163,8 +155,8 @@ body {
 
 .play-btn {
   position: absolute;
-  bottom: -58px; /* Căn lề từ trên */
-  right: 20px; /* Căn lề từ bên phải */
+  top: 105px; /* Căn lề từ trên */
+  right: 12px; /* Căn lề từ bên phải */
   background-color: rgba(255, 255, 255, 0.7); /* Nền màu trắng trong suốt */
   border: none;
   border-radius: 50%; /* Hình tròn */
